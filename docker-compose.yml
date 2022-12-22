@@ -9,11 +9,11 @@ services:
     devices:
       - /dev/net/tun:/dev/net/tun
     environment:
-      - VPN_SERVICE_PROVIDER=            # See https://github.com/qdm12/gluetun/wiki
+      - VPN_SERVICE_PROVIDER= Server Canada WG CA 02        # See https://github.com/qdm12/gluetun/wiki
       - VPN_TYPE=wireguard
-      - WIREGUARD_PRIVATE_KEY=
-      - WIREGUARD_ADDRESSES=
-      - SERVER_COUNTRIES=                # See https://github.com/qdm12/gluetun/wiki 
+      - WIREGUARD_PRIVATE_KEY= 4PoaFtpdMR+IUVVX6Z5i7w4M3oi9/o3cmscsC/kp9EE=
+      - WIREGUARD_ADDRESSES= 10.66.66.10/32,fd42:42:42::10/128
+      - SERVER_COUNTRIES= Canada                # See https://github.com/qdm12/gluetun/wiki 
     ports:
       - "80:80"                          # Add ports that you want to expose
       - "8080:8080"
@@ -27,3 +27,4 @@ services:
     command: bash start.sh
     restart: always
     
+     
